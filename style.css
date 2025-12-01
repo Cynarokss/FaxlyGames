@@ -1,0 +1,144 @@
+/* Fondo animado con degradado */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(270deg, #6a00ff, #00eaff, #ff00cc);
+  background-size: 600% 600%;
+  animation: fondoAnimado 15s ease infinite;
+  color: #eee;
+}
+
+/* Animación del fondo */
+@keyframes fondoAnimado {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Encabezado */
+header {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3em;
+  color: #fff;
+  font-family: 'Impact', sans-serif;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #6a00ff, 0 0 30px #ff00cc;
+  margin: 0;
+  animation: tituloGlow 3s ease-in-out infinite alternate;
+}
+
+/* Animación del título */
+@keyframes tituloGlow {
+  from { text-shadow: 0 0 10px #00eaff; }
+  to { text-shadow: 0 0 25px #ff00cc, 0 0 40px #6a00ff; }
+}
+
+/* Menú de navegación */
+nav {
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px;
+  flex-wrap: wrap; /* para móviles */
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00eaff;
+  transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+}
+
+nav a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+  transform: scale(1.1);
+}
+
+/* Secciones */
+section {
+  padding: 40px;
+  max-width: 900px;
+  margin: 40px auto;
+  border-radius: 10px;
+  background: rgba(0,0,0,0.6);
+  box-shadow: 0 0 15px rgba(0,0,0,0.8);
+  animation: fadeIn 1s ease;
+}
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Títulos de sección */
+h2 {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 0 10px #6a00ff, 0 0 20px #00eaff;
+  margin-bottom: 20px;
+  animation: tituloSeccion 2s ease-in-out infinite alternate;
+}
+
+@keyframes tituloSeccion {
+  from { text-shadow: 0 0 10px #6a00ff; }
+  to { text-shadow: 0 0 20px #00eaff, 0 0 30px #ff00cc; }
+}
+
+/* Listas y enlaces */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+a {
+  color: #00eaff;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: 0 0 5px #00eaff;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+a:hover {
+  color: #ffcc00;
+  text-shadow: 0 0 10px #ffcc00;
+}
+
+/* Texto general */
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Responsive para móviles */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2em;
+  }
+
+  nav {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  section {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  p, ul li {
+    font-size: 1em;
+  }
+}
