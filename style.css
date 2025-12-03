@@ -1,4 +1,3 @@
-/* Fondo animado con degradado */
 body {
   margin: 0;
   font-family: 'Arial', sans-serif;
@@ -8,14 +7,12 @@ body {
   color: #eee;
 }
 
-/* Animación del fondo */
 @keyframes fondoAnimado {
   0% { background-position: 0% 50%; }
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-/* Encabezado */
 header {
   background: rgba(0,0,0,0.6);
   padding: 30px;
@@ -31,13 +28,11 @@ header h1 {
   animation: tituloGlow 3s ease-in-out infinite alternate;
 }
 
-/* Animación del título */
 @keyframes tituloGlow {
   from { text-shadow: 0 0 10px #00eaff; }
   to { text-shadow: 0 0 25px #ff00cc, 0 0 40px #6a00ff; }
 }
 
-/* Menú de navegación */
 nav {
   background: rgba(0,0,0,0.7);
   display: flex;
@@ -61,7 +56,6 @@ nav a:hover {
   transform: scale(1.1);
 }
 
-/* Secciones */
 section {
   padding: 40px;
   max-width: 900px;
@@ -72,13 +66,11 @@ section {
   animation: fadeIn 1s ease;
 }
 
-/* Animación de entrada */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* Títulos de sección */
 h2 {
   color: #fff;
   text-align: center;
@@ -92,7 +84,6 @@ h2 {
   to { text-shadow: 0 0 20px #00eaff, 0 0 30px #ff00cc; }
 }
 
-/* Listas y enlaces */
 ul {
   list-style: none;
   padding: 0;
@@ -116,13 +107,11 @@ a:hover {
   text-shadow: 0 0 10px #ffcc00;
 }
 
-/* Texto general */
 p {
   font-size: 1.2em;
   line-height: 1.6;
 }
 
-/* Responsive para móviles */
 @media (max-width: 600px) {
   header h1 {
     font-size: 2em;
@@ -141,4 +130,74 @@ p {
   p, ul li {
     font-size: 1em;
   }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .contenedor {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+    padding: 10px;
+  }
+  .contenedor {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 17px;
+    padding: 12px;
+  }
+  .contenedor {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1280px) {
+  body {
+    font-size: 18px;
+    padding: 15px;
+  }
+  .contenedor {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1440px) {
+  body {
+    font-size: 19px;
+    padding: 20px;
+  }
+}
+
+.miembro {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.miembro .foto {
+  width: 80px;   /* tamaño de la foto */
+  height: 80px;
+  border-radius: 50%; /* opcional: hace la foto circular */
+  margin-right: 15px;
+}
+
+.miembro .info h3 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.miembro .info p {
+  margin: 5px 0;
 }
