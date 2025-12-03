@@ -201,3 +201,21 @@ p {
 .miembro .info p {
   margin: 5px 0;
 }
+
+header {
+  background: rgba(0,0,0,0.6);
+  padding: 30px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between; /* título a la izquierda, selector a la derecha */
+  align-items: center;
+}
+
+#languageSwitcher {
+  padding: 5px 10px;
+  font-size: 1em;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
